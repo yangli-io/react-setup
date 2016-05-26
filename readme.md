@@ -1,5 +1,10 @@
-React Setup
+React Frontend Setup
 
 ```npm install```
 ```npm run dev```
-open index.html
+
+To the the server
+
+```npm start```
+
+open localhost:8000
