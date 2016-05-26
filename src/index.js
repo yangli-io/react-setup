@@ -1,3 +1,5 @@
-const hello = (name) => `${name} from qantas`
+import React from 'react';
+import { render } from 'react-dom';
+import Container from './Components/Container';
 
-console.log(hello('yang'));
+render(<Container names={["steve", "aarthi", "steve", "egor", "bill"]}/>, document.getElementById('root'));
