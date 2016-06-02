@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node_modules/.bin/webpack --config webpack.config.js",
-    "start": "node ./app.js"
+    "start": "npm run dev && node ./app.js"
   },
   "repository": {
     "type": "git",

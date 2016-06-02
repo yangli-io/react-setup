@@ -6,7 +6,7 @@ import Container from '../Components/Container';
 const app = express();
 
 app.get('/', (req, res) => {
-	const renderedHTML = renderToString(<Container names={["steve", "aarthi", "steve", "subash", "bill"]}/>);
+	const renderedHTML = renderToString(<Container names={["steve", "aarthi", "steve", "egor", "bill"]}/>);
 	res.send(`<!DOCTYPE HTML><html><head></head><body><div id="root">${renderedHTML}</div><script src="/index.js"></script></body></html>`);
 });
 
