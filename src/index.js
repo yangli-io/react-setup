@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Container from './Components/Container';
+import App from './Components/App';
 
-render(<Container names={["steve", "aarthi", "steve", "egor", "bill"]}/>, document.getElementById('root'));
+render(<App />, document.getElementById('root'));

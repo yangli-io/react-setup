@@ -3,27 +3,27 @@ import React, { Component, PropTypes } from 'react';
 export default class Counter extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: 0
-    }
   }
-  
-  componentWillMount() {
-    this.state.value = this.props.value;
+
+  handleClickIncrease() {
+    this.props.dispatch({
+      type: 'INCREASE',
+      id: this.props.id
+    });
   }
-  
-  handleClick(incrementor) {
-    this.props.onChange(this.state.value + incrementor);
-    this.setState({
-      value: this.state.value + incrementor
-    })
+
+  handleClickDecrease() {
+    this.props.dispatch({
+      type: 'DECREASE',
+      id: this.props.id
+    });
   }
 
   render() {
     return <div>
-      <button onClick={() => {this.handleClick(-1)}}>Minus</button>
-      <div>{this.state.value}</div>
-      <button onClick={() => {this.handleClick(1)}}>Plus</button>
+      <button onClick={() => {this.handleClickDecrease()}}>Minus</button>
+      <div>{this.props.value}</div>
+      <button onClick={() => {this.handleClickIncrease()}}>Plus</button>
     </div>
   }
 }
